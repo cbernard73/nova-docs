@@ -379,3 +379,11 @@ To mark as relationship as `searchable`, chain the `searchable` method onto the 
 ```php
 BelongsTo::make('User')->searchable()
 ```
+
+The resource being searched will be searched using the columns specifed in the `search` property. The default is `id` so you'll probably need to change that if you are using the `searchable` method.
+
+```php
+public static $search = [
+    'name'
+]'
+```
